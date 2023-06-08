@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 body{
   width: 100%;
@@ -11,35 +15,57 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #E8226D;
+  background: #fe2679;
+  background-image: linear-gradient(#ffffff3a 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff3a 1px, transparent 1px);
+  background-size: 56px 56px;
 }
 ::selection{
   color: #fff;
-  background: #ec6627;
+  background: #ff692e;
 }
 .wrapper{
-  width: 90vmin;
-  padding: 40px 30px 50px 30px;
+  width: 93vmin;
+  max-width: 450px;
+  padding: 40px 30px 20px 30px;
   background: #fff;
-  border-radius: 30px;
+  border-radius: 20px;
   text-align: center;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
 }
-.wrapper header{
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media only screen and (max-width: 450px) {
+  .wrapper{
+    width:90%
+  }
 }
+.wrapper header{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  }
+
 .wrapper header img{
-  height: 60px;
+  height: 40px;
+  align-self: flex-start;
+  margin-bottom: 10px;
 }
 .wrapper header h1{
-  font-size: 27px;
+  font-size: 22px;
   font-weight: 600;
+  color: rgb(56, 56, 56);
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+.wrapper header p{
+  font-size: 15px;
+  font-weight: 400;
+  color: #525252;
+  align-self: flex-start;
 }
 .wrapper form{
-  margin: 40px 0;
+  margin: 25px 0;
 }
 form .field{
   width: 100%;
@@ -76,7 +102,7 @@ form .field .input-area{
   font-weight: 500;
   background: none;
   caret-color: #E8226D;
-  border-radius: 10px;
+  border-radius: 9px;
   border: 2px solid #E8226D;
   transition: all 0.2s ease;
   height: 50px;
